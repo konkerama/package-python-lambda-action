@@ -4,7 +4,7 @@
 # time=$(date)
 # echo "time=$time" >> $GITHUB_OUTPUT
 
-
+cd $1 || exit
 pip install -t ./package -r requirements.txt
 cd package || exit
 zip -r ../sample-lambda-$GITHUB_SHA.zip .
