@@ -2,6 +2,8 @@
 # FROM alpine:3.10
 FROM python:3.8-slim
 
+RUN apt-get install zip unzip -y
+
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY entrypoint.sh /entrypoint.sh
 
